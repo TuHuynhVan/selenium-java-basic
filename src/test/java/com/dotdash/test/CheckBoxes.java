@@ -1,6 +1,6 @@
 package com.dotdash.test;
 
-import com.dotdash.com.dotdash.helper.Webdriver;
+import com.dotdash.helper.Webdriver;
 import com.dotdash.pageobject.CheckBoxPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;

@@ -1,7 +1,7 @@
 package com.dotdash.test;
 
-import com.dotdash.com.dotdash.flow.LoginFlow;
-import com.dotdash.com.dotdash.helper.Webdriver;
+import com.dotdash.flow.LoginFlow;
+import com.dotdash.helper.Webdriver;
 import com.dotdash.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;

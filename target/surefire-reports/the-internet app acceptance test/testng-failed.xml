@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [the-internet app acceptance test]">
+  <test thread-count="5" verbose="0" name="dotdash - take-home-webdriver-test(failed)">
+    <classes>
+      <class name="com.dotdash.test.DnD">
+        <methods>
+          <include name="able_to_dnd_left_to_right"/>
+          <include name="tear_down"/>
+          <include name="init"/>
+          <include name="able_to_dnd_right_to_left"/>
+        </methods>
+      </class> <!-- com.dotdash.test.DnD -->
+    </classes>
+  </test> <!-- dotdash - take-home-webdriver-test(failed) -->
+</suite> <!-- Failed suite [the-internet app acceptance test] -->

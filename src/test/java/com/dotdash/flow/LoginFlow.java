@@ -1,4 +1,4 @@
-package com.dotdash.com.dotdash.flow;
+package com.dotdash.flow;
 
 import com.dotdash.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;

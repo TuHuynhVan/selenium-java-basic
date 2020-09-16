@@ -1,0 +1,8 @@
+com/dotdash/helper/Webdriver.class
+com/dotdash/pageobject/DnDPage.class
+com/dotdash/pageobject/ContextMenuPage.class
+com/dotdash/flow/LoginFlow.class
+com/dotdash/test/Login.class
+com/dotdash/pageobject/LoginPage.class
+com/dotdash/pageobject/CheckBoxPage.class
+com/dotdash/test/CheckBoxes.class

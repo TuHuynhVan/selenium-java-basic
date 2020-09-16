@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="the-internet app acceptance test" duration-ms="5076" started-at="2020-09-16T05:36:31Z" finished-at="2020-09-16T05:36:36Z">
+    <groups>
+    </groups>
+    <test name="dotdash - take-home-webdriver-test" duration-ms="5076" started-at="2020-09-16T05:36:31Z" finished-at="2020-09-16T05:36:36Z">
+      <class name="com.dotdash.test.Login">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.dotdash.test.Login@b7f23d9]" name="init" is-config="true" duration-ms="1655" started-at="2020-09-16T05:36:33Z" finished-at="2020-09-16T05:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="login_invalid_creds()[pri:0, instance:com.dotdash.test.Login@b7f23d9]" name="login_invalid_creds" duration-ms="375" started-at="2020-09-16T05:36:34Z" finished-at="2020-09-16T05:36:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalid_creds -->
+        <test-method status="PASS" signature="login_valid_creds()[pri:0, instance:com.dotdash.test.Login@b7f23d9]" name="login_valid_creds" duration-ms="217" started-at="2020-09-16T05:36:35Z" finished-at="2020-09-16T05:36:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_valid_creds -->
+        <test-method status="PASS" signature="tear_down()[pri:0, instance:com.dotdash.test.Login@b7f23d9]" name="tear_down" is-config="true" duration-ms="766" started-at="2020-09-16T05:36:35Z" finished-at="2020-09-16T05:36:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_down -->
+      </class> <!-- com.dotdash.test.Login -->
+      <class name="com.dotdash.test.CheckBoxes">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="init" is-config="true" duration-ms="1660" started-at="2020-09-16T05:36:31Z" finished-at="2020-09-16T05:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="is_able_to_select_first_checkbox()[pri:0, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="is_able_to_select_first_checkbox" duration-ms="80" started-at="2020-09-16T05:36:33Z" finished-at="2020-09-16T05:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- is_able_to_select_first_checkbox -->
+        <test-method status="PASS" signature="is_able_to_unselect_first_checkbox()[pri:0, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="is_able_to_unselect_first_checkbox" duration-ms="35" started-at="2020-09-16T05:36:33Z" finished-at="2020-09-16T05:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- is_able_to_unselect_first_checkbox -->
+        <test-method status="PASS" signature="is_default_second_checkbox_selected()[pri:1, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="is_default_second_checkbox_selected" duration-ms="17" started-at="2020-09-16T05:36:36Z" finished-at="2020-09-16T05:36:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- is_default_second_checkbox_selected -->
+        <test-method status="PASS" signature="is_able_to_unselect_second_checkbox()[pri:2, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="is_able_to_unselect_second_checkbox" duration-ms="47" started-at="2020-09-16T05:36:36Z" finished-at="2020-09-16T05:36:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- is_able_to_unselect_second_checkbox -->
+        <test-method status="PASS" signature="tear_down()[pri:0, instance:com.dotdash.test.CheckBoxes@58c1c010]" name="tear_down" is-config="true" duration-ms="207" started-at="2020-09-16T05:36:36Z" finished-at="2020-09-16T05:36:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_down -->
+      </class> <!-- com.dotdash.test.CheckBoxes -->
+    </test> <!-- dotdash - take-home-webdriver-test -->
+  </suite> <!-- the-internet app acceptance test -->
+</testng-results>

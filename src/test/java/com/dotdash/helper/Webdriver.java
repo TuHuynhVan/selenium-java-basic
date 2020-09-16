@@ -1,4 +1,4 @@
-package com.dotdash.com.dotdash.helper;
+package com.dotdash.helper;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
