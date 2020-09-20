@@ -12,14 +12,14 @@ public class Login {
     private WebDriver chrome_driver = null;
 
     @BeforeClass
-    public void init() {
+    void init() {
         Webdriver web_driver = new Webdriver();
         chrome_driver = web_driver.get_chrome_driver();
         web_driver.open_page("login");
     }
 
     @Test
-    public void login_invalid_creds() {
+    void login_invalid_creds() {
         /*
          * This is the 1st pattern where we use page object directly here
          * */
@@ -32,7 +32,7 @@ public class Login {
     }
 
     @Test
-    public void login_valid_creds() {
+    void login_valid_creds() {
         /*
          * This is the 2nd pattern where we abstract business Logic in a business flow and reuse
          * We will not use page object directly here in the test, just the business abstraction

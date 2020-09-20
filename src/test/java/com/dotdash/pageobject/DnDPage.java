@@ -1,11 +1,12 @@
 package com.dotdash.pageobject;
 
 import okio.Timeout;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+
+import java.awt.Robot;
+import java.awt.event.InputEvent;
 
 public class DnDPage {
 
@@ -22,7 +23,7 @@ public class DnDPage {
         this.driver = driver;
     }
 
-    public DnDPage dnd_left_to_right() {
+    public DnDPage dnd_left_to_right() throws Exception {
         this.from = this.driver.findElement(left_element);
         this.to = this.driver.findElement(right_element);
         this.left_column_text_before_dnd = from.getText();
@@ -31,7 +32,7 @@ public class DnDPage {
         return this;
     }
 
-    public DnDPage dnd_right_to_left() {
+    public DnDPage dnd_right_to_left() throws Exception {
         this.from = this.driver.findElement(right_element);
         this.to = this.driver.findElement(left_element);
         this.left_column_text_before_dnd = to.getText();
@@ -58,9 +59,49 @@ public class DnDPage {
         return this;
     }
 
-    public void perform_drag_n_drop() {
-        Actions action = new Actions(this.driver);
-        action.dragAndDrop(from, to).perform();
+    public void perform_drag_n_drop() throws Exception {
+
+        /*
+         * This will not work due to chrome driver buf
+         **/
+        // Actions action = new Actions(this.driver);
+        // action.dragAndDrop(from, to).build().perform();
+        // action.clickAndHold(from).pause(2000).moveToElement(to).release().build().perform();
+
+        /*
+         * Refer: https://www.programering.com/a/MTN1kTMwATE.html
+         **/
+        Robot robot = new Robot();
+        robot.setAutoDelay(500);
+
+        // Get size of elements
+        Dimension fromSize = from.getSize();
+        System.out.println(fromSize);
+        Dimension toSize = to.getSize();
+        System.out.println(toSize);
+        Point toLocation = to.getLocation();
+        System.out.println(toLocation);
+        Point fromLocation = from.getLocation();
+        System.out.println(fromLocation.getX());
+        System.out.println(fromLocation.getY());
+        System.out.println("Screen Size: " + driver.manage().window().getSize());
+
+        //Make Mouse coordinate centre of element
+        toLocation.x += toSize.width / 2;
+        toLocation.y += toSize.height / 2 + toSize.height * 2 / 3;
+        fromLocation.x += fromSize.width / 2;
+        fromLocation.y += fromSize.height / 2 + fromSize.height * 2 / 3;
+
+        // Click first on screen
+        robot.mousePress(InputEvent.BUTTON1_MASK);
+        robot.mouseMove(fromLocation.x, fromLocation.y);
+        robot.mousePress(InputEvent.BUTTON1_MASK);
+
+        //Move to final position
+        robot.mouseMove(toLocation.x, toLocation.y);
+
+        //Drop
+        robot.mouseRelease(InputEvent.BUTTON1_MASK);
     }
 
 }

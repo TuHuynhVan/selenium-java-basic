@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.InputEvent;
+
 public class ContextMenuPage {
 
     private WebDriver driver;
@@ -23,11 +26,16 @@ public class ContextMenuPage {
         return this;
     }
 
-    public ContextMenuPage is_alert_displayed() {
+    public ContextMenuPage is_alert_displayed() throws Exception{
         final String expected_alert_content = "You selected a context menu";
         String actual_alert_content = this.driver.switchTo().alert().getText();
         this.driver.switchTo().alert().accept();
         Assert.assertEquals(actual_alert_content, expected_alert_content, "[ERR] Wrong alert content");
+
+        // Try to click to escape the context
+        Robot robot = new Robot();
+        robot.setAutoDelay(500);
+        robot.mousePress(InputEvent.BUTTON1_MASK);
         return this;
     }
 }
