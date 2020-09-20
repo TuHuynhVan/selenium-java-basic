@@ -1,3 +1,11 @@
+# Wha is this repo for?
+
+This repository is demonstration on how to interact with most basic web elements and technique in Selenium with Java.
+The original challenge was from: https://github.com/Dotdashcom/take-home-webdriver-test
+
+You can use Docker like the instruction or use this page directly for testing:
+https://the-internet.herokuapp.com/
+
 # Environment
 * Maven is installed
 
