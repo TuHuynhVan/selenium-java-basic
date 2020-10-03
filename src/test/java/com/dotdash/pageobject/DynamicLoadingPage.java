@@ -6,8 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class DynamicLoadingPage {
-    private WebDriver driver = null;
+public class DynamicLoadingPage extends BasePageObject {
     private final int WAIT_TIME = 10;
 
     private By start_btn = By.xpath("//*[@id='start']/button");
@@ -15,6 +14,7 @@ public class DynamicLoadingPage {
 
     public DynamicLoadingPage(WebDriver driver) {
         this.driver = driver;
+        open_page("dynamic_loading/2");
     }
 
     public DynamicLoadingPage click_on_start_btn() {

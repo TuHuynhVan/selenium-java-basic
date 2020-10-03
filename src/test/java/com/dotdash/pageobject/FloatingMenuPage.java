@@ -6,13 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class FloatingMenuPage {
+public class FloatingMenuPage extends BasePageObject{
 
-    private WebDriver driver;
     private By menu = By.id("menu");
 
     public FloatingMenuPage(WebDriver driver) {
         this.driver = driver;
+        open_page("floating_menu");
     }
 
     public FloatingMenuPage scroll_to_bottom() {

@@ -1,34 +1,23 @@
 package com.dotdash.test;
 
-import com.dotdash.helper.Webdriver;
 import com.dotdash.pageobject.IFramePage;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class IFrame {
+public class IFrame extends BaseTest {
 
-    private WebDriver chrome_driver = null;
+    private IFramePage iframe_page = null;
 
-    @BeforeClass
+    @BeforeMethod
     void init() {
-        Webdriver driver = new Webdriver();
-        chrome_driver = driver.get_chrome_driver();
-        driver.open_page("iframe");
+        if (iframe_page == null) iframe_page = new IFramePage(driver);
     }
 
     @Test
     void able_to_input_text_to_iframe() {
-        IFramePage iframe_page = new IFramePage(chrome_driver);
         iframe_page
                 .input_text_in_Iframe("ABC")
                 .verify_input_text();
     }
 
-    @AfterClass
-    void tear_down() {
-        chrome_driver.close();
-        chrome_driver.quit();
-    }
 }

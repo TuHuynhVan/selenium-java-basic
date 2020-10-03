@@ -8,9 +8,8 @@ import org.testng.Assert;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 
-public class DnDPage {
+public class DnDPage extends BasePageObject{
 
-    private WebDriver driver;
     private WebElement from;
     private WebElement to;
     private String left_column_text_before_dnd = "";
@@ -21,6 +20,7 @@ public class DnDPage {
 
     public DnDPage(WebDriver driver) {
         this.driver = driver;
+        open_page("drag_and_drop");
     }
 
     public DnDPage dnd_left_to_right() throws Exception {

@@ -8,8 +8,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class MouseHoverPage {
-    private WebDriver driver = null;
+public class MouseHoverPage extends BasePageObject {
 
     private By user_avatars = By.cssSelector(".figure");
     private By user_profile_names = By.cssSelector(".figcaption h5");
@@ -24,6 +23,7 @@ public class MouseHoverPage {
 
     public MouseHoverPage(WebDriver driver) {
         this.driver = driver;
+        open_page("hovers");
     }
 
     public MouseHoverPage mouse_over_user(int user_num) {

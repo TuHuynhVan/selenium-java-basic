@@ -7,9 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class JavaScriptAlertPage {
+public class JavaScriptAlertPage extends BasePageObject {
 
-    private WebDriver driver = null;
     private final int MAX_WAIT_TIME = 10;
     private By js_alert = By.cssSelector("[onclick='jsAlert()']");
     private By js_confirm = By.cssSelector("[onclick='jsConfirm()']");
@@ -23,6 +22,7 @@ public class JavaScriptAlertPage {
 
     public JavaScriptAlertPage(WebDriver driver) {
         this.driver = driver;
+        open_page("javascript_alerts");
     }
 
     // --- JS ALERT SCOPE ---

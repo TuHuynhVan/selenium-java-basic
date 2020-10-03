@@ -7,9 +7,8 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class CheckBoxPage {
+public class CheckBoxPage extends BasePageObject {
 
-    private WebDriver driver;
     private final By check_boxes = By.cssSelector("#checkboxes > input");
 
     private final int FIRST_CHECK_BOX_INDEX = 0;
@@ -17,6 +16,7 @@ public class CheckBoxPage {
 
     public CheckBoxPage(WebDriver driver) {
         this.driver = driver;
+        open_page("checkboxes");
     }
 
     private List<WebElement> checkboxes_elems() {

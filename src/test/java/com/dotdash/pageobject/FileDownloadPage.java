@@ -11,8 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 
-public class FileDownloadPage {
-    private WebDriver driver = null;
+public class FileDownloadPage extends BasePageObject {
     private final int WAIT_TIME = 10;
     private By file_hyperlink = By.xpath("//*[@id='content']/div/a");
     private final String FILE_NAME = "some-file.txt";
@@ -21,6 +20,7 @@ public class FileDownloadPage {
 
     public FileDownloadPage(WebDriver driver) {
         this.driver = driver;
+        open_page("download");
     }
 
     public FileDownloadPage click_on_file_link_to_download() {

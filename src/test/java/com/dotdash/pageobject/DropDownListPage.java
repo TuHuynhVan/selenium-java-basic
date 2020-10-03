@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class DropDownListPage {
+public class DropDownListPage extends BasePageObject{
 
-    private WebDriver driver = null;
     private final By drop_down = By.id("dropdown");
     private WebElement first_selected_option = null;
 
     public DropDownListPage(WebDriver driver) {
         this.driver = driver;
+        open_page("dropdown");
     }
 
     public DropDownListPage select_option(String option) {

@@ -29,6 +29,6 @@ public class Webdriver {
     }
 
     public void open_page(String path) {
-        driver.get("http://localhost:7080/" + path);
+        driver.get("https://the-internet.herokuapp.com/");
     }
 }

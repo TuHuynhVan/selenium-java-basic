@@ -1,32 +1,21 @@
 package com.dotdash.test;
 
-import com.dotdash.helper.Webdriver;
 import com.dotdash.pageobject.FileDownloadPage;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class FileDownload {
+public class FileDownload extends BaseTest {
 
-    private WebDriver chrome_driver = null;
+    private FileDownloadPage file_download_page = null;
 
-    @BeforeClass
-    void init(){
-        Webdriver driver = new Webdriver();
-        chrome_driver = driver.get_chrome_driver();
-        driver.open_page("download");
+    @BeforeMethod
+    void init() {
+        if (file_download_page == null) file_download_page = new FileDownloadPage(driver);
     }
 
     @Test
-    void able_to_download_file(){
-        FileDownloadPage file_download_page = new FileDownloadPage(chrome_driver);
+    void able_to_download_file() {
         file_download_page.click_on_file_link_to_download(); // included verification
     }
 
-    @AfterClass
-    void tear_down(){
-        chrome_driver.close();
-        chrome_driver.quit();
-    }
 }

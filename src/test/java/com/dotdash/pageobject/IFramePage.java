@@ -5,15 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class IFramePage {
+public class IFramePage extends BasePageObject {
 
-    private WebDriver driver;
     private By iframe = By.id("mce_0_ifr");
     private By iframe_body = By.id("tinymce");
     private String text_input_in_iframe = "";
 
     public IFramePage(WebDriver driver) {
         this.driver = driver;
+        open_page("iframe");
     }
 
     public IFramePage input_text_in_Iframe(String text) {

@@ -6,12 +6,12 @@ import org.openqa.selenium.WebDriver;
 import javax.print.DocFlavor;
 import java.util.ArrayList;
 
-public class OpenNewWindowPage {
-    private WebDriver driver;
+public class OpenNewWindowPage extends BasePageObject{
     private By hyperlink = By.linkText("Click Here");
 
     public OpenNewWindowPage(WebDriver driver){
         this.driver = driver;
+        open_page("windows");
     }
 
     public NewWinDowPage click_on_hyperlink_to_open_new_tab(){

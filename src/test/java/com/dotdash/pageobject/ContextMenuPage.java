@@ -10,13 +10,13 @@ import org.testng.Assert;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
-public class ContextMenuPage {
+public class ContextMenuPage extends BasePageObject{
 
-    private WebDriver driver;
     private final By right_click_area = By.id("hot-spot");
 
     public ContextMenuPage(WebDriver driver) {
         this.driver = driver;
+        open_page("context_menu");
     }
 
     public ContextMenuPage right_click_on_target_area() {

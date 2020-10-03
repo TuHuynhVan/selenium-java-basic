@@ -6,15 +6,13 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.Assert;
 
-import java.util.Date;
 import java.util.logging.Level;
 
-public class JavaScriptErrorPage {
-
-    WebDriver driver;
+public class JavaScriptErrorPage extends BasePageObject{
 
     public JavaScriptErrorPage(WebDriver driver) {
         this.driver = driver;
+        open_page("javascript_error");
     }
 
     public void verify_page_contains_js_error(String err) {

@@ -7,8 +7,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class DynamicContentPage {
-    private WebDriver driver = null;
+public class DynamicContentPage extends BasePageObject {
     private final By dynamic_contents = By.xpath("//div[@class='large-10 columns']");
 
     private final int CONTENT_INDEX_01 = 0;
@@ -17,6 +16,7 @@ public class DynamicContentPage {
 
     public DynamicContentPage(WebDriver driver) {
         this.driver = driver;
+        open_page("dynamic_content");
     }
 
     public void verify_content_change_after_refresh(int time_to_refresh) {

@@ -4,9 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class LoginPage {
+public class LoginPage extends BasePageObject {
 
-    private final WebDriver driver;
     private final By username_txt_field = By.id("username");
     private final By password_txt_field = By.id("password");
     private final By login_btn = By.cssSelector("[type='submit']");
@@ -14,6 +13,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        open_page("login");
     }
 
     public LoginPage input_username(String username) {

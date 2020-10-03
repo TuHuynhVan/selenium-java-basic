@@ -8,8 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
-public class DynamicControlPage {
-    private WebDriver driver = null;
+public class DynamicControlPage extends BasePageObject{
     private final int WAIT_TIME = 10;
 
     private final By remove_checkbox_btn = By.xpath("//*[@id='checkbox-example']/button");
@@ -19,6 +18,7 @@ public class DynamicControlPage {
 
     public DynamicControlPage(WebDriver driver) {
         this.driver = driver;
+        open_page("dynamic_controls");
     }
 
     public DynamicControlPage click_on_remove_checkbox_button() {
