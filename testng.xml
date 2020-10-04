@@ -3,7 +3,7 @@
 <suite name="the-internet app acceptance test" verbose="1" >
     <test name="dotdash - take-home-webdriver-test">
         <packages>
-            <package name="com.dotdash.test" />
+            <package name="com.dotdash.test.single" />
         </packages>
     </test>
 </suite>

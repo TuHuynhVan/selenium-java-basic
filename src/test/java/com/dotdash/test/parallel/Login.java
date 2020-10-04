@@ -1,7 +1,8 @@
-package com.dotdash.test;
+package com.dotdash.test.parallel;
 
 import com.dotdash.flow.LoginFlow;
 import com.dotdash.pageobject.LoginPage;
+import com.dotdash.test.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

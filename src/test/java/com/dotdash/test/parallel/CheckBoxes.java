@@ -1,8 +1,7 @@
-package com.dotdash.test;
+package com.dotdash.test.parallel;
 
-import com.dotdash.helper.Webdriver;
 import com.dotdash.pageobject.CheckBoxPage;
-import org.openqa.selenium.WebDriver;
+import com.dotdash.test.BaseTest;
 import org.testng.annotations.*;
 
 @Test

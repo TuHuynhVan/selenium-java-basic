@@ -9,7 +9,7 @@ public class BaseTest {
     public WebDriver driver = null;
 
     @BeforeClass
-    void set_up() {
+    public void set_up() {
         System.out.println("Before class");
         Webdriver chrome_driver = new Webdriver();
         driver = chrome_driver.get_chrome_driver();
@@ -17,7 +17,7 @@ public class BaseTest {
     }
 
     @AfterClass
-    void tear_down() {
+    public void tear_down() {
         System.out.println("After class");
         driver.close();
         driver.quit();

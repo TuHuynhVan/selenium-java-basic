@@ -10,7 +10,22 @@ https://the-internet.herokuapp.com/
 * Maven is installed
 
 # Run test
-```mvn test```
+* First testNG suite: `testng.xml` will handle test cases those need to run in a single thread.
+* Second testNG suite: `testng-parallel.xml` will handle test cases those can be executed in parallel.
+
+Because the DnD test case need to be executed in a single thread. We use `Robot` class
+to handle DnD actions so any other movements (from other test cases) interupt it.
+ 
+## Run from IDE
+* Right click on the target .xml file then run (depends on your IDE)
+
+# Run from commandline
+``` mvn clean test -DsuiteXmlFile=the-target-test-suite.xml ```
+
+Example: `mvn clean test -DsuiteXmlFile=testng-parallel.xml`
+
+* If you wanna run more than 1 testNG suite, please use:
+``` mvn clean test -DsuiteXmlFile=testng-01.xml,testng-02.xml ```
 
 # Webdriver Tests
 ## Prerequisites

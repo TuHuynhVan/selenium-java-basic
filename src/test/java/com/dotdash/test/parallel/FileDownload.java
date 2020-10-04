@@ -1,6 +1,7 @@
-package com.dotdash.test;
+package com.dotdash.test.parallel;
 
 import com.dotdash.pageobject.FileDownloadPage;
+import com.dotdash.test.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
